@@ -1,0 +1,21 @@
+<div class="new">
+    <h2>Add a review for {{ movie.title }}</h2>
+    <p>{{ nameError }}</p>
+    <p>{{ starError }}</p>
+    <p>{{ commError }}</p>
+    <form (submit)="addReview()">
+        <span>Your Name: </span>
+        <input type="text" name="name" [(ngModel)]=addReviews.name><br><br>
+        <span>Stars: </span>
+        <select name="star" [(ngModel)]="addReviews.star">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <span>Your review: </span> <input type="text" name="comments" [(ngModel)]="addReviews.comments"><br><br>
+        <input type="submit">
+    </form>
+    <button [routerLink]="['/movielist']">Home</button>
+</div>

@@ -1,0 +1,23 @@
+<div class="new">
+    <h2>Add a new Movie!</h2>
+    <p>{{ titleError }}</p>
+    <p>{{ nameError}}</p>
+    <p>{{ starError }}</p>
+    <p>{{ commentsError }}</p>
+
+    <form (submit)="addMovie()">
+        <span>Movie Title: </span> <input type="text" name="newMovie.title" [(ngModel)]="newMovie.title"><br><br>
+        <span>Your Name: </span> <input type="text" name="newMovie.ratings.name" [(ngModel)]="newMovie.ratings.name"><br><br>
+        <span>Stars: </span> <select name="newMovie.ratings.star" [(ngModel)]="newMovie.ratings.star">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+
+        </select>
+        <span>Your review: </span> <input type="text" name="newMovie.ratings.comments" [(ngModel)]="newMovie.ratings.comments"><br><br>
+        <input type="submit">
+    </form>
+    <button [routerLink]="['/movielist']">Home</button>
+</div>
